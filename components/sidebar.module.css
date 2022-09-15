@@ -1,0 +1,224 @@
+.side {
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    right: 0;
+    width: 21rem;
+    padding: 0 1.5rem 1.5rem;
+    top: 2rem;
+    box-shadow: -1px 0 3px 1px  rgba(69, 90, 100, 0.088);
+    transition: all ease .5s;
+    background-color: white;
+}
+
+.swipe{
+    display: flex;
+}
+
+.btnTag {
+    border: none;
+    background-color: rgb(236, 239, 241);
+    padding: .1rem .5rem;
+    margin: .2rem .5rem .2rem 0;
+    font-size: 0.8125rem;
+    color: rgb(69, 90, 100);
+    font-weight: 400;
+    line-height: 1.66;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tags {
+    margin: 1rem 0;
+}
+
+.select {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: auto;
+    right: 0;
+    width: 21rem;
+    padding: 0 1rem;
+    top: 2rem;
+    box-shadow: -1px 0 3px 1px  rgba(69, 90, 100, 0.088);
+    transition: all ease .5s;
+}
+
+.cover {
+    margin: 4rem auto;
+    width: 85%;
+}
+
+.divContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    transition: all ease .5s;
+}
+
+.child {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .1rem 0 0;
+    color: rgba(76, 99, 110, 0.427);
+    font-size: 1.4rem;
+}
+
+.h2 {
+    margin: 0;
+}
+
+.single {
+    margin: 1rem .5rem 0 0;
+}
+
+.ul {
+    padding: 0 0 0 1rem;
+}
+
+.list {
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(55, 71, 79, 0.825);
+    line-height: 1.43;
+    margin: 1rem 0;
+}
+
+.triangle {
+    margin: 1rem .5rem 0 0;
+    color: red;
+}
+
+.infoHover {
+    margin: -1rem 0 1rem;
+    font-weight: lighter;
+    font-size: .1rem;
+    color: rgba(105, 105, 105, 0.759);
+}
+
+.btnDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.note {
+    color: rgba(55, 71, 79, 0.825);
+    line-height: 1.43;
+    font-weight: lighter;
+}
+
+.singleBtn {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    height: 3rem;
+    border: 1px solid rgba(128, 128, 128, 0.542);
+    background-color: transparent;
+}
+
+.stack {
+    background-color: rgb(98, 93, 245);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 2.5rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    transition: all ease .5s;
+}
+
+.stack:hover {
+    background-color: rgb(1, 1, 146);
+}
+
+.singleBtn:hover {
+    border-color: rgb(98, 93, 245);
+}
+
+.link:hover {
+    color: rgb(98, 93, 245);
+}
+
+.d4 {
+    background-color: rgb(27, 30, 46);
+    height: fit-content;
+    width: 100%;
+    color: white;
+    padding: .1rem 1rem 0;
+    overflow-x: auto;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.installIcon {
+    display: block;
+    font-size: 1.3rem;
+    margin: 0 0 0;
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.install {
+    margin: .7rem 0 .5rem;
+    width: 100%;
+    white-space: nowrap;
+}
+
+@media screen and (max-width : 900px) {
+    .select {
+        display: none;
+    }
+
+    @keyframes mover {
+        from  {bottom : -10rem}
+        to {bottom : 0}
+    }
+
+    .side {
+        background-color: white;
+        bottom: 0;
+        animation: mover;
+        animation-duration: .5s;
+        top: auto;
+        z-index: 10;
+        height: 100%;
+        padding: 0 1rem 1rem ;
+        width: 100%;
+        box-shadow: 0 -100rem 2rem 2rem rgba(128, 128, 128, 0.486);
+    }
+
+    .swipe{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: auto;
+        margin-bottom: 1rem;
+        width: 50%;
+        margin: 0 1rem 1rem auto;
+    }
+
+    .touch{
+        margin: 0;
+    }
+}

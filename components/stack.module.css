@@ -1,0 +1,67 @@
+.container {
+    margin: 3rem 0;
+    padding: 1rem 0;
+    border-radius: 4px;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: rgb(236, 239, 241);
+    cursor: pointer;
+}
+
+.container1 {
+    margin: 3rem 0;
+    padding: 1rem 0;
+    border-radius: 4px;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    cursor: pointer;
+}
+
+
+.container1:hover{
+    background-color: rgb(236, 239, 241);
+}
+
+.h2 {
+    padding: 2rem 0 2rem 2rem;
+    width: 100%;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.icon{
+    margin-right: 1rem;
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.backDiv{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.note{
+    font-size: 1.3rem;
+}
+
+.btn{
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    height: 2.5rem;
+    border: 1px solid  rgba(128, 128, 128, 0.43);
+}
+
+.btn:hover{
+    outline: none;
+    border: 2px solid  rgb(98, 93, 245);
+}
+
+.buttonDiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    margin: 2rem 0;
+}
