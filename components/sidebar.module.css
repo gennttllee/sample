@@ -11,6 +11,19 @@
     background-color: white;
 }
 
+.mySide {
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    right: 0;
+    width: 21rem;
+    padding: 0 1.5rem 1.5rem;
+    top: 2rem;
+    box-shadow: -1px 0 3px 1px  rgba(69, 90, 100, 0.088);
+    transition: all ease .5s;
+    background-color: white;
+}
+
 .swipe{
     display: flex;
 }
@@ -193,21 +206,41 @@
     }
 
     @keyframes mover {
-        from  {bottom : -10rem}
+        from  {bottom : -100vh}
         to {bottom : 0}
     }
 
+    @keyframes movement {
+        from  {bottom : 0}
+        to {bottom : -100vh}
+    }
+
     .side {
+        transition: ease all .5s;
         background-color: white;
         bottom: 0;
         animation: mover;
-        animation-duration: .5s;
+        animation-duration: .6s;
         top: auto;
         z-index: 10;
         height: 100%;
         padding: 0 1rem 1rem ;
         width: 100%;
         box-shadow: 0 -100rem 2rem 2rem rgba(128, 128, 128, 0.486);
+    }
+
+    .mySide {
+        transition: ease all .5s;
+        background-color: white;
+        bottom: 0;
+        animation: movement;
+        animation-duration: .7s;
+        animation-fill-mode: forwards;
+        top: auto;
+        z-index: 10;
+        height: 100%;
+        padding: 0 1rem 1rem ;
+        width: 100%;
     }
 
     .swipe{

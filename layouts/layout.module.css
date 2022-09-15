@@ -22,7 +22,7 @@
 .btnDiv{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .2rem;
 }
 
 .head, .head1, .feedback{

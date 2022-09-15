@@ -8,10 +8,13 @@ import { useSnackbar } from 'notistack';
 import dynamic from 'next/dynamic';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import {  useState } from 'react';
+
 
 
 
 const SideBar = ({ side, setSide, cart, setCart }) => {
+    const [anime, setAnime] = useState(false)
     const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
     const navigation = async (data) => {
@@ -31,13 +34,17 @@ const SideBar = ({ side, setSide, cart, setCart }) => {
     }
 
     const touchBar = () => {
-        setSide(null)
+        setAnime(true)
+        setTimeout(() => {
+            setSide(null)
+            setAnime(false)
+        }, 700);
     }
 
 
     return (
         <>
-            {side ? <div className={styles.side}>
+            {side ? <div className={anime ? styles.mySide : styles.side}>
                 <div onClick={touchBar} className={styles.swipe}>
                     <FontAwesomeIcon icon={faLeftRight} />
                     <p className={styles.touch}>Touch to close</p>
